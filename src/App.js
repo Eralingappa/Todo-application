@@ -8,9 +8,11 @@ const App = () => {
 
   const changeHandler = e =>{
     setTask(e.target.value)
+ 
   }
   const submitHandler = e =>{
     e.preventDefault();
+   
     const newTodos = [...todos,task];
     setTodos(newTodos);
     setTask("");
@@ -27,7 +29,7 @@ const App = () => {
             <h5>Todo Management Application</h5>
             <form onSubmit={submitHandler}>
               <input size="30" type="text" name="task" value={task} onChange={changeHandler} /> 
-              <input type="submit" value="Add" name="Add"/>
+              <button type="submit" value="Add" name="Add">Add</button>
             </form>
             <TodoList todolist={todos} deleteHandler={deleteHandler}/>
           </div>
