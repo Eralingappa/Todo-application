@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 
 const TodoList = ({todolist,deleteHandler}) => {
@@ -13,3 +15,19 @@ const TodoList = ({todolist,deleteHandler}) => {
 }
 
 export default TodoList
+
+//single Todo
+
+/*const TodoList = ({todolist}) => {
+    return (
+        <div>
+            {todolist.map((todo,index) =>
+            <div key={index}>
+                <h1>{todo} 
+                </h1>
+            </div>)}
+        </div>
+    )
+}
+
+export default TodoList*/

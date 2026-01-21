@@ -1,7 +1,7 @@
 
 import React,{useState} from 'react'
 import TodoList from './components/TodoList';
-
+import './App.css'
 const App = () => {
   const [task,setTask] = useState("");
   const [todos,setTodos] = useState([]);
@@ -22,20 +22,16 @@ const App = () => {
     setTodos(newTodos);
   }
   return (
-    <div>
-      <center>
-        <div>
-          <div>
-            <h5>Todo Management Application</h5>
+         <div>
+            <h1 className='h1'>Todo Management Application</h1>
             <form onSubmit={submitHandler}>
-              <input size="30" type="text" name="task" value={task} onChange={changeHandler} /> 
+              <input size="30" type="text" name="task" value={task} 
+              onChange={changeHandler} /> 
               <button type="submit" value="Add" name="Add">Add</button>
             </form>
             <TodoList todolist={todos} deleteHandler={deleteHandler}/>
           </div>
-        </div>
-      </center>
-    </div>
+  
   )
 }
 
