@@ -18,7 +18,7 @@ const App = () => {
     setTask("");
   }
   const deleteHandler = (indexValue) =>{
-    const newTodos = todos.filter((todo,index) => index !== indexValue);
+    const newTodos = todos.filter((todos,index) => index !== indexValue);
     setTodos(newTodos);
   }
   return (
